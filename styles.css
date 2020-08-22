@@ -7,8 +7,8 @@
   box-shadow: -1px -2px 2px 0px #900;
   padding:0;
   position:fixed;
-  bottom:-22%;
-  height:28%;
+  bottom:-24%;
+  height:30%;
   box-sizing: border-box;
   padding:10px;
 }
@@ -43,6 +43,15 @@
 #comment-bit {
   width:50%;
 }
+#warning-text {
+  color:#900;
+  font-size:80%;
+  opacity:0;
+}
+  #warning-text.show {
+    opacity:1;
+  }
+
 
 #ao3-add-to-comment {
   margin-left:1rem;
@@ -72,8 +81,8 @@
 
 @media only screen and (max-width: 800px) {
   #ao3-comment-container {
-    height:32%;
-    bottom:-26%;
+    height:34%;
+    bottom:-28%;
   }
   #ao3-add-to-comment {
     margin-top: 0.5rem;

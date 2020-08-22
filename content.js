@@ -97,10 +97,19 @@ function addCommentTooltip() {
       var new_comment_text = "<blockquote>" + document.getElementById("quote-selection").innerHTML + "</blockquote>\n";
       new_comment_text += document.getElementById("ao3-comment-input").value + "\n";
       comment_textarea.value += new_comment_text + "\n\n";
+      document.getElementById("warning-text").setAttribute("class","show");
       resetCommentHelpers();
+      toggleCommentHelper();
     });
     comment_bit.appendChild(add_text_button);
   comment_tooltip.appendChild(comment_bit);
+
+  // warning text
+  var warning_text = document.createElement("p");
+  warning_text.setAttribute("id","warning-text");
+  warning_text.appendChild(document.createTextNode("Don't forget to actually POST your comment!"));
+  comment_bit.appendChild(warning_text);
+  
 
 
   // add to DOM
