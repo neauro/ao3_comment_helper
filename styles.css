@@ -6,11 +6,14 @@
   box-shadow: -1px -2px 2px 0px rgba(245,245,245,1);
   padding:0;
   position:fixed;
-  bottom:0px;
+  bottom:-22%;
   height:28%;
   box-sizing: border-box;
   padding:10px;
 }
+  #ao3-comment-container.show {
+    bottom:0px;
+  }
 #ao3-comment-container textarea {
   margin-top:1rem;
   min-height:100px;
@@ -49,7 +52,7 @@
   margin:0px auto;
   position:relative;
 }
-  #ao3-comment-desc.show p {
+  #ao3-comment-container.show #ao3-comment-desc p {
     opacity:0;
   }
   #ao3-comment-desc p {
@@ -67,6 +70,7 @@
 @media only screen and (max-width: 800px) {
   #ao3-comment-container {
     height:32%;
+    bottom:-26%;
   }
   #ao3-add-to-comment {
     margin-top: 0.5rem;

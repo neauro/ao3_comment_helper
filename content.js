@@ -11,7 +11,7 @@ function resetCommentHelpers() {
 
 // toggles helper
 function toggleCommentHelper() {
-  var desc = document.getElementById("ao3-comment-desc");
+  var desc = document.getElementById("ao3-comment-container");
   if (desc.classList[0] === "show") {
     desc.setAttribute("class","");
   }
@@ -25,11 +25,11 @@ function addCommentTooltip() {
   // tooltip container
   var comment_tooltip = document.createElement("div");
   comment_tooltip.setAttribute("id","ao3-comment-container");
+  comment_tooltip.setAttribute("class","show");
 
   // expand/collapse controls
   var desc = document.createElement("div");
   desc.setAttribute("id","ao3-comment-desc");
-  desc.setAttribute("class","show");
   var helper_text = document.createElement("p");
     helper_text.appendChild(document.createTextNode("This is helper text."));
     desc.appendChild(helper_text);
