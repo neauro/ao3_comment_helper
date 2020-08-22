@@ -54,7 +54,7 @@ function addCommentTooltip() {
     comment_bit.appendChild(comment_input);
     // button: clear text
     var clear_button = document.createElement("button");
-    clear_button.innerHTML = "Clear comment";
+    clear_button.innerHTML = "Clear this comment";
     clear_button.setAttribute("id","ao3-clear-comment"); 
     clear_button.addEventListener("click", function() {
       var clear_confirm = confirm("Are you sure you want to clear your comment text?\n(It will be gone forever!)");
@@ -69,6 +69,8 @@ function addCommentTooltip() {
     add_text_button.innerHTML = "Add to AO3 comment";
     add_text_button.setAttribute("id","ao3-add-to-comment"); 
     add_text_button.addEventListener("click", function() {
+      var comment_textarea = document.getElementById("add_comment").getElementsByTagName("textarea")[0]
+      comment_textarea.value += "hello! ";
     });
     comment_bit.appendChild(add_text_button);
   comment_tooltip.appendChild(comment_bit);
