@@ -5,6 +5,12 @@
 
 document.body.onload = addCommentTooltip();
 
+// resets elements
+function resetCommentHelpers() {
+  document.getElementById("ao3-comment-input").value = "";
+  document.getElementById("quote-selection").innerHTML = "No quoted text yet."; 
+}
+
 // adds elements to support commenting
 function addCommentTooltip() {
   // tooltip container
@@ -37,20 +43,9 @@ function addCommentTooltip() {
     comment_input.setAttribute("cols", "50");
     comment_input.setAttribute("id", "ao3-comment-input");
     comment_input.value = "";
-    comment_input.addEventListener("keydown", function(event) {
-
-      // if textarea is empty, disable button
-      /* if (this.value === "") {
-      console.log("log: this textarea is empty");
-        document.getElementById("ao3-clear-comment").disabled = true;
-      }
-      else {
-      console.log("log: this textarea is NOT empty");
-        document.getElementById("ao3-clear-comment").disabled = false;
-      }*/
-
-      console.log("test test",event);
-    });
+    // comment_input.addEventListener("keydown", function(event) {
+    //   console.log("test test",event);
+    //});
     comment_bit.appendChild(comment_input);
     // button: clear text
     var clear_button = document.createElement("button");
@@ -73,6 +68,7 @@ function addCommentTooltip() {
       var new_comment_text = "<blockquote>" + document.getElementById("quote-selection").innerHTML + "</blockquote>\n";
       new_comment_text += document.getElementById("ao3-comment-input").value + "\n";
       comment_textarea.value += new_comment_text + "\n\n";
+      resetCommentHelpers();
     });
     comment_bit.appendChild(add_text_button);
   comment_tooltip.appendChild(comment_bit);
