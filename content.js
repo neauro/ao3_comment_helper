@@ -1,14 +1,12 @@
 // TODO :
-// * when user highlights text, show a tooltip with a textarea in it, and a button
-//    * on mouseup, get text selection
-// * when user clicks button, append that comment to the comment box at the bottom of the chapter
+// put a warning that user needs to click "comment" in order to complete their comment
 
 document.body.onload = addCommentTooltip();
 
 // resets elements
 function resetCommentHelpers() {
   document.getElementById("ao3-comment-input").value = "";
-  document.getElementById("quote-selection").innerHTML = "No quoted text yet."; 
+  document.getElementById("quote-selection").innerHTML = "No quoted text yet. Highlight text to make a comment on it!";
 }
 
 // adds elements to support commenting
@@ -26,7 +24,7 @@ function addCommentTooltip() {
 
     var quote_block = document.createElement("blockquote");
     quote_block.setAttribute("id","quote-selection");
-    quote_block.appendChild(document.createTextNode("No quoted text yet."));
+    quote_block.appendChild(document.createTextNode("No quoted text yet. Highlight text to make a comment on it!"));
     quote_bit.appendChild(quote_block);
   comment_tooltip.appendChild(quote_bit);
 
