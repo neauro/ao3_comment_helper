@@ -36,7 +36,7 @@ function addCommentTooltip() {
     comment_input.setAttribute("rows", "4");
     comment_input.setAttribute("cols", "50");
     comment_input.setAttribute("id", "ao3-comment-input");
-    comment_input.value = "Placeholder text.";
+    comment_input.value = "";
     comment_input.addEventListener("keydown", function(event) {
 
       // if textarea is empty, disable button
@@ -70,7 +70,9 @@ function addCommentTooltip() {
     add_text_button.setAttribute("id","ao3-add-to-comment"); 
     add_text_button.addEventListener("click", function() {
       var comment_textarea = document.getElementById("add_comment").getElementsByTagName("textarea")[0]
-      comment_textarea.value += "hello! ";
+      var new_comment_text = "<blockquote>" + document.getElementById("quote-selection").innerHTML + "</blockquote>\n";
+      new_comment_text += document.getElementById("ao3-comment-input").value + "\n";
+      comment_textarea.value += new_comment_text + "\n\n";
     });
     comment_bit.appendChild(add_text_button);
   comment_tooltip.appendChild(comment_bit);
