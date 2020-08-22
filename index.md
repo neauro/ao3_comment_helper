@@ -11,7 +11,7 @@ the chrome extension will only be active when you're viewing a work on Ao3. when
 
 ![Image showing 3 sets of comments attached to 3 quoted passages from the text](https://raw.githubusercontent.com/neauro/ao3_comment_helper/gh-pages/screenshot_bottom.png)
 
-when you highlight text, the comment helper will open up automatically. you'll see the quoted text on the left, and can write your comment on the right.
+when you highlight text in the work, the comment helper will open automatically. you'll see the quoted text on the left, and can write your comment on the right.
 
 ![Image showing 3 sets of comments attached to 3 quoted passages from the text](https://raw.githubusercontent.com/neauro/ao3_comment_helper/gh-pages/screenshow_window.png)
 
