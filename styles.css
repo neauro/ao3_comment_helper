@@ -4,6 +4,7 @@
   width:100%;
   border-top:1px solid rgba(245,245,245,1);
   box-shadow: -1px -2px 2px 0px rgba(245,245,245,1);
+  box-shadow: -1px -2px 2px 0px #900;
   padding:0;
   position:fixed;
   bottom:-22%;
@@ -45,6 +46,8 @@
 
 #ao3-add-to-comment {
   margin-left:1rem;
+  background-image: linear-gradient(#e43737 2%,#900 95%,#900 100%);
+  color: #fff;
 }
 
 #ao3-comment-desc {
@@ -63,7 +66,7 @@
     position:absolute;
     right:0;
   }
-#toggle_button {
+#toggle-button {
   font-size:80%;
 }
 

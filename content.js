@@ -1,6 +1,3 @@
-// TODO :
-// put a warning that user needs to click "comment" in order to complete their comment
-
 document.body.onload = addCommentTooltip();
 
 // resets elements
@@ -12,11 +9,14 @@ function resetCommentHelpers() {
 // toggles helper
 function toggleCommentHelper() {
   var desc = document.getElementById("ao3-comment-container");
+  var button = document.getElementById("toggle-button");
   if (desc.classList[0] === "show") {
     desc.setAttribute("class","");
+    button.innerHTML = "[Expand]";
   }
   else {
     desc.setAttribute("class","show");
+    button.innerHTML = "[Collapse]";
   }
 }
 
@@ -25,16 +25,20 @@ function addCommentTooltip() {
   // tooltip container
   var comment_tooltip = document.createElement("div");
   comment_tooltip.setAttribute("id","ao3-comment-container");
-  comment_tooltip.setAttribute("class","show");
+  // comment_tooltip.setAttribute("class","show"); // defaults showing first
 
   // expand/collapse controls
   var desc = document.createElement("div");
   desc.setAttribute("id","ao3-comment-desc");
   var helper_text = document.createElement("p");
-    helper_text.appendChild(document.createTextNode("This is helper text."));
+    helper_text.appendChild(document.createTextNode("This is the Ao3 Comment Helper! Highlight text to get started. "));
+    var helper_link = document.createElement("a");
+      helper_link.setAttribute("href","/");
+      helper_link.innerHTML = "Learn more here.";
+      helper_text.appendChild(helper_link);
     desc.appendChild(helper_text);
   var toggle_label = document.createElement("button");
-    toggle_label.setAttribute("id","toggle_button");
+    toggle_label.setAttribute("id","toggle-button");
     toggle_label.addEventListener("click", function() {
       toggleCommentHelper();
     });
@@ -131,4 +135,6 @@ ao3_work.onmouseup = function(event) {
   // shows selection text in textarea
   var selection = getSelectionText();
   tooltip_input.innerHTML = selection;
+  document.getElementById("ao3-comment-container").setAttribute("class","show");
+  document.getElementById("toggle-button").innerHTML = "[Collapse]";
 };
