@@ -9,11 +9,38 @@ function resetCommentHelpers() {
   document.getElementById("quote-selection").innerHTML = "No quoted text yet. Highlight text to make a comment on it!";
 }
 
+// toggles helper
+function toggleCommentHelper() {
+  var desc = document.getElementById("ao3-comment-desc");
+  if (desc.classList[0] === "show") {
+    desc.setAttribute("class","");
+  }
+  else {
+    desc.setAttribute("class","show");
+  }
+}
+
 // adds elements to support commenting
 function addCommentTooltip() {
   // tooltip container
   var comment_tooltip = document.createElement("div");
   comment_tooltip.setAttribute("id","ao3-comment-container");
+
+  // expand/collapse controls
+  var desc = document.createElement("div");
+  desc.setAttribute("id","ao3-comment-desc");
+  desc.setAttribute("class","show");
+  var helper_text = document.createElement("p");
+    helper_text.appendChild(document.createTextNode("This is helper text."));
+    desc.appendChild(helper_text);
+  var toggle_label = document.createElement("button");
+    toggle_label.setAttribute("id","toggle_button");
+    toggle_label.addEventListener("click", function() {
+      toggleCommentHelper();
+    });
+    toggle_label.innerHTML = "[Collapse]";
+    desc.appendChild(toggle_label);
+  comment_tooltip.appendChild(desc);
 
   // quote portion
   var quote_bit = document.createElement("div");

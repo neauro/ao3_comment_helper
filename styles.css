@@ -7,7 +7,7 @@
   padding:0;
   position:fixed;
   bottom:0px;
-  height:24%;
+  height:28%;
   box-sizing: border-box;
   padding:10px;
 }
@@ -44,9 +44,29 @@
   margin-left:1rem;
 }
 
+#ao3-comment-desc {
+  width:80%;
+  margin:0px auto;
+  position:relative;
+}
+  #ao3-comment-desc.show p {
+    opacity:0;
+  }
+  #ao3-comment-desc p {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  #ao3-comment-desc button {
+    position:absolute;
+    right:0;
+  }
+#toggle_button {
+  font-size:80%;
+}
+
 @media only screen and (max-width: 800px) {
   #ao3-comment-container {
-    height:28%;
+    height:32%;
   }
   #ao3-add-to-comment {
     margin-top: 0.5rem;
