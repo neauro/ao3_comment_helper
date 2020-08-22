@@ -107,7 +107,7 @@ function addCommentTooltip() {
   // warning text
   var warning_text = document.createElement("p");
   warning_text.setAttribute("id","warning-text");
-  warning_text.appendChild(document.createTextNode("Don't forget to actually POST your comment!"));
+  warning_text.appendChild(document.createTextNode("Please don't forget to actually POST your comment!"));
   comment_bit.appendChild(warning_text);
   
 
@@ -119,7 +119,6 @@ function addCommentTooltip() {
 // gets selected text
 // via https://stackoverflow.com/questions/5379120/get-the-highlighted-selected-text
 function getSelectionText() {
-  console.log("LOG: in getSelectionText()");
   var text = "";
   var activeEl = document.activeElement;
   var activeElTagName = activeEl ? activeEl.tagName.toLowerCase() : null;
