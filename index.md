@@ -9,11 +9,11 @@ with this chrome extension, you can put together comments that look like this on
 
 the chrome extension will only be active when you're viewing a work on Ao3. when it's active, you'll see the comment helper appear on the bottom of the work.
 
-![Image showing 3 sets of comments attached to 3 quoted passages from the text](https://raw.githubusercontent.com/neauro/ao3_comment_helper/gh-pages/sample_screenshot.png)
+![Image showing 3 sets of comments attached to 3 quoted passages from the text](https://raw.githubusercontent.com/neauro/ao3_comment_helper/gh-pages/screenshot_bottom.png)
 
 when you highlight text, the comment helper will open up automatically. you'll see the quoted text on the left, and can write your comment on the right.
 
-![Image showing 3 sets of comments attached to 3 quoted passages from the text](https://raw.githubusercontent.com/neauro/ao3_comment_helper/gh-pages/sample_screenshot.png)
+![Image showing 3 sets of comments attached to 3 quoted passages from the text](https://raw.githubusercontent.com/neauro/ao3_comment_helper/gh-pages/screenshow_window.png)
 
 when you're done writing a comment for this quote, you can press the "Add to AO3 comment" button to add the quote and comment to your comment text area. you can add as many quotes and comments as you like.
 
