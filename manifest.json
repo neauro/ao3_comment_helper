@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "AO3 Comment Helper",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://archiveofourown.org/works/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}

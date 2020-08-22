@@ -1,0 +1,14 @@
+#ao3-comment-container {
+  height:500px;
+  background-color:#fff;
+  width:15%;
+  border:1px solid red;
+  padding:0;
+  position:fixed;
+  left:10px;
+}
+#ao3-comment-container textarea {
+  border:1px solid blue;
+  margin-top:1rem;
+  display:block;
+}
