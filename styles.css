@@ -1,14 +1,33 @@
 #ao3-comment-container {
   height:500px;
   background-color:#fff;
-  width:15%;
+  width:100%;
   border:1px solid red;
   padding:0;
   position:fixed;
-  left:10px;
+  bottom:0px;
+  height:200px;
+  box-sizing: border-box;
+  padding:10px;
 }
 #ao3-comment-container textarea {
   border:1px solid blue;
   margin-top:1rem;
+  min-height:100px;
+  margin-bottom:1rem;
   display:block;
+}
+
+#quote-bit, #comment-bit {
+  border: 1px solid purple;
+  display:inline-block;
+  box-sizing:border-box;
+  height:200px;
+}
+
+#quote-bit {
+  width:30%;
+}
+#comment-bit {
+  width:50%;
 }
