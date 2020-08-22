@@ -28,7 +28,7 @@ function addCommentTooltip() {
   var comment_bit = document.createElement("div");
   comment_bit.setAttribute("id","comment-bit");
     var comment_label = document.createElement("p");
-    comment_label.appendChild(document.createTextNode("Your comment:"));
+    comment_label.appendChild(document.createTextNode("Your comment about this quote:"));
     comment_bit.appendChild(comment_label);
 
     // input
@@ -36,18 +36,40 @@ function addCommentTooltip() {
     comment_input.setAttribute("rows", "4");
     comment_input.setAttribute("cols", "50");
     comment_input.setAttribute("id", "ao3-comment-input");
-    comment_input.value = "This is a test.";
+    comment_input.value = "Placeholder text.";
+    comment_input.addEventListener("keydown", function(event) {
+
+      // if textarea is empty, disable button
+      /* if (this.value === "") {
+      console.log("log: this textarea is empty");
+        document.getElementById("ao3-clear-comment").disabled = true;
+      }
+      else {
+      console.log("log: this textarea is NOT empty");
+        document.getElementById("ao3-clear-comment").disabled = false;
+      }*/
+
+      console.log("test test",event);
+    });
     comment_bit.appendChild(comment_input);
     // button: clear text
     var clear_button = document.createElement("button");
     clear_button.innerHTML = "Clear comment";
     clear_button.setAttribute("id","ao3-clear-comment"); 
+    clear_button.addEventListener("click", function() {
+      var clear_confirm = confirm("Are you sure you want to clear your comment text?\n(It will be gone forever!)");
+        if (clear_confirm === true) {
+          document.getElementById("ao3-comment-input").value = "";
+        }
+    });
     comment_bit.appendChild(clear_button);
 
     // button: add text to comment
     var add_text_button = document.createElement("button");
-    add_text_button.innerHTML = "Add to comment";
+    add_text_button.innerHTML = "Add to AO3 comment";
     add_text_button.setAttribute("id","ao3-add-to-comment"); 
+    add_text_button.addEventListener("click", function() {
+    });
     comment_bit.appendChild(add_text_button);
   comment_tooltip.appendChild(comment_bit);
 
@@ -77,7 +99,8 @@ function getSelectionText() {
 
 // when text is highlighted, show tooltip that lets users write a comment on that text
 // document.onmouseup = document.onkeyup = document.onselectionchange = function(event) {
-document.onmouseup = function(event) {
+var ao3_work = document.getElementById("main");
+ao3_work.onmouseup = function(event) {
   var tooltip_input = document.getElementById("quote-selection");
 
   // shows selection text in textarea
