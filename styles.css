@@ -11,7 +11,6 @@
   padding:10px;
 }
 #ao3-comment-container textarea {
-  border:1px solid blue;
   margin-top:1rem;
   min-height:100px;
   margin-bottom:1rem;
@@ -19,15 +18,24 @@
 }
 
 #quote-bit, #comment-bit {
-  border: 1px solid purple;
-  display:inline-block;
+  float:left;
   box-sizing:border-box;
   height:200px;
 }
 
 #quote-bit {
   width:30%;
+  margin-left:10%;
+  padding-right:1rem;
 }
+  #quote-selection {
+    border-left: 3px solid #848484;
+    color: #6a6a6a;
+    padding-left:0.5rem;
+    font-size:90%;
+    height:60%;
+    overflow-y:scroll;
+  }
 #comment-bit {
   width:50%;
 }

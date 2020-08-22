@@ -3,8 +3,6 @@
 //    * on mouseup, get text selection
 // * when user clicks button, append that comment to the comment box at the bottom of the chapter
 
-
-
 document.body.onload = addCommentTooltip();
 
 // adds elements to support commenting
@@ -22,6 +20,7 @@ function addCommentTooltip() {
 
     var quote_block = document.createElement("blockquote");
     quote_block.setAttribute("id","quote-selection");
+    quote_block.appendChild(document.createTextNode("No quoted text yet."));
     quote_bit.appendChild(quote_block);
   comment_tooltip.appendChild(quote_bit);
 
